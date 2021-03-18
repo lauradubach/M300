@@ -1,0 +1,18 @@
+Vagrant.configure(2) do |config|
+  config.vm.box = "ubuntu/xenial64"
+  config.vm.provider "virtualbox" do |vb|
+end
+
+config.vm.provision "shell", inline: <<-SHELL
+sudo useradd Ferzana
+sudo useradd Fabio
+sudo useradd Yang
+sudo groupadd IT
+sudo groupadd KV
+sudo groupadd HR
+sudo usermod -a -G IT Ferzana
+sudo usermod -a -G KV Fabio
+sudo usermod -a -G HR Yang
+sudo touch file1.txt 
+SHELL
+end

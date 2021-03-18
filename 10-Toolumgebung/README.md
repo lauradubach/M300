@@ -35,10 +35,23 @@ Um weitere Schritte durrchzuführen können Sie dieses Glossar verwenden:
 
 Virtual Box
 --
+Nun wie gewohnt eine Virtuelle Ubuntu Maschine Installieren.
+https://ubuntu.com/download/desktop
+
+Ubuntu Version: 20.04.2.0
 
 Vagrant
 --
 Vagrant ist ein Programm zur Erstellung und Verwaltung virtueller Maschinen und ermöglicht einfache Softwareverteilung.
+
+Vagrant Anwendung herunterladen: https://www.vagrantup.com/
+
+| Befehle       | Bedeutung     |
+| ------------- |:-------------:|
+|$ vagrant init ubuntu/xenial64     | #Vagrantfile erzeugen  |
+|$ vagrant up --provider virtualbox  |#Virtuelle Maschine erstellen und starten  |   
+
+
 
 Atom (Visual Studio Code)
 --
