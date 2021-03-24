@@ -167,6 +167,53 @@ end
 #### SSH
 _____
 
+Dies ist ein Netzwerkprotokoll, das Benutzern, insbesondere Systemadministratoren, eine sichere Möglichkeit bietet, über ein ungesichertes Netzwerk auf einen Computer zuzugreifen.
+
+Skript:
+
+```Vagrant.configure("2") do |config|
+
+  config.vm.define "SRV01" do |srv01|
+    srv01.vm.box = "ubuntu/xenial64"
+    srv01.vm.provider "virtualbox" do |vb|
+      vb.memory = "512"
+    end
+    srv01.vm.hostname = "SRV01"
+    srv01.vm.network "private_network", ip: "192.168.50.5"
+    srv01.vm.provision "shell", inline: <<-SHELL
+  echo '127.0.0.1 localhost srv01\n192.168.50.6 srv02' > /etc/hosts
+  su - vagrant -c "chmod 700 .ssh && ssh-keygen -t rsa -f .ssh/id_rsa -b 4096 -C vagrant@srv01 -P ''"
+  sudo echo 'vagrant:password' | sudo chpasswd
+  sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config; sudo systemctl restart sshd
+  #sudo echo "password" | cat /home/vagrant/.ssh/id_rsa.pub | ssh srv02 'cat>> /home/vagrant/.ssh/authorized_keys'
+  sudo touch SRV01.txt
+  sudo echo "Dieses File kommt vom SRV01" > SRV01.txt
+SHELL
+  end
+
+  config.vm.define "SRV02" do |srv02|
+    srv02.vm.box = "ubuntu/xenial64"
+    srv02.vm.hostname = "SRV02"
+    srv02.vm.network "private_network", ip:"192.168.50.6"
+    srv02.vm.provider "virtualbox" do |vb|
+      vb.memory = "512"
+    end
+    srv02.vm.provision "shell", inline: <<-SHELL
+  echo '127.0.0.1 localhost srv02\n192.168.50.5 srv01' > /etc/hosts
+  su - vagrant -c "chmod 700 .ssh && ssh-keygen -t rsa -f .ssh/id_rsa -b 4096 -C vagrant@srv02 -P ''"
+  sudo echo 'vagrant:password' | sudo chpasswd
+  sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config; sudo systemctl restart sshd
+  sudo touch SRV02.txt
+  sudo echo "Dieses File kommt vom SRV02" > SRV02.txt
+
+SHELL
+    end
+    config.vm.provision "shell", inline: <<-SHELL
+
+SHELL
+end
+```
+
 Lernvortschritt
 --
 Vor diesem Modul kannte ich so ziemlich nichts von dem was wir angeschaut haben. Ich wusste nicht was Vagrant ist oder Github, ich hatte auch keine Ahnung was ein Markdown sein könnte. Durch diese Aufgaben, konnte ich alles sehr gut kennenlernen und ausprobieren. Ich kann nun eine VM erstellen nur mit einem einzigen Vagrant Befehl, ich kann mit einem Editor Dokumentieren und ganz einfach mit dem Markdown arbeiten, ich kenne viele Git Befehle und kann diese anwenden. Ich nehme sehr viel mit und habe auch sehr viel neues gelernt, was mir in Zukunft sicher helfen kann.
