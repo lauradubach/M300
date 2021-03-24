@@ -65,8 +65,7 @@ Vagrant Anwendung herunterladen: https://www.vagrantup.com/
 
 Kurzer Test:
 
-![vagrant](https://github.com/lauradubach/M300/blob/main/10-Toolumgebung/vagrant.PNG | width=100)
-
+<img src="https://github.com/lauradubach/M300/blob/main/10-Toolumgebung/vagrant.PNG" width="100" height="100">
 
 Atom (Visual Studio Code)
 --
