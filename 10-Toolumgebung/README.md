@@ -65,7 +65,7 @@ Vagrant Anwendung herunterladen: https://www.vagrantup.com/
 
 Kurzer Test:
 
-![vagrant](10-Toolumgebung/vagrant.PNG)
+![vagrant](https://github.com/lauradubach/M300/blob/main/10-Toolumgebung/vagrant.PNG)
 
 
 
