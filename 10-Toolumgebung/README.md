@@ -65,14 +65,14 @@ Vagrant Anwendung herunterladen: https://www.vagrantup.com/
 
 Kurzer Test:
 
-![Vagrant VM](\Documents\vagrant.png)
+![vagrant](file:///C:/Users/laura/Documents/vagrant.PNG)
 
 
 
 Atom (Visual Studio Code)
 --
 
-Nun sollten wir einen Editor Herunterladen. Ich habe mich für Atom entschieden, da ich diesen schon kannte und besser klarkomme.
+Nun sollten wir einen Editor Herunterladen. Ich habe mich für Atom entschieden, da ich diesen schon kannte und besser damit klarkomme.
 
 Unter: _https://atom.io/_ lässt sich die neuste Version Downloaden.
 
