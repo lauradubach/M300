@@ -2,24 +2,36 @@
 ==
 Inhalt
 --
-* Git Client / Git Account
+* Git Account
+* Git Client
 * Virtual Box
 * Vagrant
 * Atom (Visual Studio Code)
 * Reflexion
 
-Git Client / Git Account
+Git Account
 --
-Als erstes werden wir uns einen Git Account erstellen und alles Notwendige dazu Konfigurieren.
-Zuerst den Installer Herunterladen: _https://git-scm.com/downloads_
-Ein GUY leitet Sie ganz einfach durch alles Notwendige. Einen Git Account können Sie ganz einfach unter:_www.github.com anlegen_.
+Als erstes werden wir uns einen Git Account erstellen und alles Notwendige dazu Konfigurieren. Dieser Account dient uns als Cloud-Speicher für die Dokumentation.
+* Ganz einfach unter www.github.com einen Account erstellen.
+* Nun die E-Mail Adresse bestätigen und sich anmelden.
 
 Im Git Client erstellen wir einen Ordner in welchem wir das Repository Herunterladen können.
 
-Im gewünschten Ordner folgenden Befehl eingeben:
-_$ git clone https://github.com/mc-b/M300_ (Der Link muss natürlich Ihrem Pfad entsprechen)
+SSH-Key erstellen und hinzufügen
+--
+Im Git-Bash folgenden Befehl eingeben: _$ ssh-keygen -t rsa -b 4096 -C 'DEINE EMAILADRESSE'_ Nun wird ein SSH-Key generiert, diesen Kopieren. Jetzt wechseln Sie zurück auf Ihren github Account.
+* Unter Benutzerkonto Settings aufrufen
+* Nun auf den Abschnitt SSH und GPG keys wechseln
+* New SSH-Key wählen
+* Hier den Kopierten SSH-Key hineinkopieren und speichern
 
-Um weitere Schritte durrchzuführen können Sie dieses Glossar verwenden:
+Git Client
+--
+Zuerst den Installer Herunterladen: _https://git-scm.com/downloads_ Ein GUY leitet Sie ganz einfach durch alles Notwendige.
+
+Nun in den Git Bash wechseln und im gewünschten Ordner folgenden Befehl eingeben:_$ git clone https://github.com/mc-b/M300_ (Der Link muss natürlich Ihrem Pfad entsprechen)
+
+Um weitere Schritte durchzuführen, können Sie dieses Glossar verwenden:
 
 #### Glossar
 
@@ -50,6 +62,10 @@ Vagrant Anwendung herunterladen: https://www.vagrantup.com/
 | ------------- |:-------------:|
 |$ vagrant init ubuntu/xenial64     | #Vagrantfile erzeugen  |
 |$ vagrant up --provider virtualbox  |#Virtuelle Maschine erstellen und starten  |   
+
+Kurzer Test:
+
+![Vagrant VM](\Documents\vagrant.png)
 
 
 
