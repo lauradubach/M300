@@ -7,10 +7,12 @@ Inhalt
 * Virtual Box
 * Vagrant
 * Atom (Visual Studio Code)
+* Infrastruktur Sicherheit
 * Reflexion
 
 Git Account
 --
+___
 Als erstes werden wir uns einen Git Account erstellen und alles Notwendige dazu Konfigurieren. Dieser Account dient uns als Cloud-Speicher für die Dokumentation.
 * Ganz einfach unter www.github.com einen Account erstellen.
 * Nun die E-Mail Adresse bestätigen und sich anmelden.
@@ -83,3 +85,6 @@ Wir fügen dem Editor folgende Extentions hinzu:
 * vscode-pdf Extension
 
 Jedoch können wir dies bei Atom auslassen, da bei diesem Editor schon alles integriert ist.
+
+Infrastruktur Sicherheit
+--
