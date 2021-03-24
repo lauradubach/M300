@@ -90,6 +90,7 @@ Infrastruktur Sicherheit
 Hier wird beschrieben wie man eine virtualisierte Infrastruktur sicherer machen kann.
 
 #### Firewall Rules
+____
 Die Firewall stellt sicher, dass kein Netzwerkverkehr unerlaubt an ihr vorbeirauscht. Nur unbedingt notwendige Zugriffe sollten erlaubt werden.
 
 Hier wird eine VM erstellt welche eine Firewall hat:
@@ -167,4 +168,4 @@ end
 
 Lernvortschritt
 --
-Vor diesem Modul kannte ich so ziemlich nichts von dem was wir angeschaut haben. Ich wusste nicht was Vagrant ist oder Github, ich hatte auch keine Ahnung was ein Markdown sein könnte. Durch diese Aufgaben, konnte ich alles sehr gut kennenlernen und ausprobieren. Ich kann nun eine VM erstellen nur mit einem einzigen Vagrant Befehl, ich kann mit einem Editor Dokumentieren und ganz einfach mit dem Markdown arbeiten, ich kenne viele Git Befehle und kann diese anwenden. Ich nehme sehr viel mit und habe auch sehr viel neues gelernt, was mir in Zukunft sicher helfen kann. 
+Vor diesem Modul kannte ich so ziemlich nichts von dem was wir angeschaut haben. Ich wusste nicht was Vagrant ist oder Github, ich hatte auch keine Ahnung was ein Markdown sein könnte. Durch diese Aufgaben, konnte ich alles sehr gut kennenlernen und ausprobieren. Ich kann nun eine VM erstellen nur mit einem einzigen Vagrant Befehl, ich kann mit einem Editor Dokumentieren und ganz einfach mit dem Markdown arbeiten, ich kenne viele Git Befehle und kann diese anwenden. Ich nehme sehr viel mit und habe auch sehr viel neues gelernt, was mir in Zukunft sicher helfen kann.
