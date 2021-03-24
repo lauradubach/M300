@@ -65,7 +65,7 @@ Vagrant Anwendung herunterladen: https://www.vagrantup.com/
 
 Kurzer Test:
 
-![vagrant](file:///C:/Users/laura/Documents/vagrant.PNG)
+![vagrant](10-Toolumgebung/vagrant.PNG)
 
 
 
