@@ -111,7 +111,7 @@ end
 ```   
 
 #### Reverse Proxy
-
+_____
 Reverse-Proxys werden in der Regel von einer Firewall abgesichert in einem privaten Netzwerk oder einer vorgelagerten DMZ installiert. Dabei stellt der Reverse-Proxy die einzige Verbindung zwischen Internet und privaten Netzwerk dar. Alle Anfragen an die Server im LAN durchlaufen somit dieselbe Kommunikationsschnittstelle, bevor sie an die eigentlichen Zielsysteme weitergeleitet werden.
 
 
@@ -141,7 +141,7 @@ SHELL
 end
 ```
 #### Benutzer und Rechteverwaltung
-
+____
 Mit diesem Skript wurden test User, test Gruppen und ein test File angelegt.
 
 ```Vagrant.configure(2) do |config|
@@ -165,6 +165,7 @@ end
 ```
 
 #### SSH
+_____
 
 Lernvortschritt
 --
