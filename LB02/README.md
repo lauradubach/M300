@@ -7,7 +7,7 @@ Definition Container
 --
 Container sind eine Virtualisierungstechnik im Computerumfeld, die Anwendungen inklusive ihrer Laufzeitumgebungen voneinander trennt. Im Gegensatz zu einer virtuellen Maschine beinhalten Container kein eigenes Betriebssystem, sondern verwenden das des Systems, auf dem sie installiert sind. Container haben verschiedene Merkmale wie zum Beispiel, dass sie in einer Sekunde gestartet und gestoppt werden können, sie teilen sich Resourcen mit dem Host-Betriebssystem, sie sind portierbar und Cloud-Ready.
 
-<img src="https://github.com/lauradubach/M300/blob/main/LB02/Container.png.PNG" width="500" height="350">
+<img src="LB02/Container.png.PNG" width="500" height="350">
 
 #### Glossar
 
