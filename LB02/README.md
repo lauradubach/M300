@@ -9,8 +9,15 @@ Container sind eine Virtualisierungstechnik im Computerumfeld, die Anwendungen i
 
 <img src="https://github.com/lauradubach/M300/blob/main/LB02/Container.PNG" width="500" height="350">
 
-Definition Dockerfile
+Definition Docker
 --
+Docker ist eine Software, welche die Container-Virtualisierung von Anwendungen ermöglicht. Anwendungen können inklusive ihrer Abhängigkeiten in ein Image gepackt werden. Mittels einer speziellen Engine kann die so verpackte Anwendung dann in einem Docker Container ausgeführt werden.
+
+#### Vorteile
+
+* Die gute Skalierbarkeit durch die Nutzung von vielen weiteren container
+* Das schnelle starten und herunterfahren
+* Durch die einfache Verwaltung von Containern
 
 #### Glossar
 
@@ -21,3 +28,6 @@ Definition Dockerfile
 |$docker run -dit --name "Name" -p 8080:80 "Name" |#Container wird erstellt und hört auf Port 8080 |
 |$docker stop/start/remove "Name/ID" |#Docker starten,stoppen, löschen |
 |$docker logs "Name/ID" |#Output anschauen |
+
+Lernvortschritt
+--
