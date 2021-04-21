@@ -218,10 +218,7 @@ net:
 
 Die restlichen Standardeinstellungen wie Host-only Netzwerk mit fixen IP-Adressen kann 1:1 verwendet werden.
 
-
-
-
-
-
 Lernvortschritt
 --
+
+Auch in diesem Abschnitt, kannte ich voher nichts. Nun weiss ich was ein Container ist, was Docker ist, ich weiss wie man ein Container macht und ein Dockerfile erstellt, ich weiss auch wie man ein Image erstellt. In der Theorie habe ich sehr viel über die Sicherheitsaspekte gelernt und auch Kubernetes ein bisschen kennengelernt. Für mich war dieses Modul sehr interessant und eine grosse Wissensbereicherung. 
