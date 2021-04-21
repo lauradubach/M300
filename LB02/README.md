@@ -75,6 +75,19 @@ Wenn man nun die IP-Adresse mit dem Port eingibt sollte man folgendes Ergebniss 
 
 #### Volumes zur persistenten Datenablage eingerichtet
 
+Um ein Volume zu erstellen wie folgt vorgehen:
+
+1. ``$ docker run -d \
+  --name=nginxtest \
+  --mount source=nginx-vol,destination=/usr/share/nginx/html,readonly \
+  nginx:latest``
+
+Kurze Kontrolle ob alles richtig erstellt wurde:
+
+2. ``$docker volume inspect nginx-vol``
+
+<img src="https://github.com/lauradubach/M300/blob/main/LB02/Fotos/Volume.PNG" width="400" height="200">
+
 
 Glossar
 --
