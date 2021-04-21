@@ -53,6 +53,10 @@ Um auf meinen Server Zugriff zu erhalten gehe ich wie folgt vor:
 1. Im cmd über ssh eine Verbindung herstellen: _$ssh ubuntu@IP_
 2. Nun das korrekte Passwort eingeben
 
+#### Docker-Container kombinieren
+
+
+
 #### Bestehende Container als Backend, Desktop-App als Frontend  einsetzen
 
 * Als erstes erstellen wir ein Dockerfile: _$docker build -t "Name"_
@@ -164,6 +168,33 @@ Nun sollte man unter folgendem Link auf das Monitoring Tool kommen: _IP:2020/con
 
 Kubernetes
 --
+
+Kubernetes ist ein Open-Source-System zur Automatisierung der Bereitstellung, Skalierung und Verwaltung von Container-Anwendungen.
+
+#### Wichtige Merkmale
+
+* Immutable statt Mutable.
+* Deklarative statt Imperative Konfiguration.
+* Selbstheilende Systeme - Neustart bei Absturz.
+* Skalieren der Services durch Änderung der Deklaration.
+* Entkoppelte APIs – LoadBalancer / Ingress (Reverse Proxy).
+* Anwendungsorientiertes statt Technik Denken.
+* Abstraktion der Infrastruktur statt in Rechnern Denken.
+
+#### Objekte
+
+1. **Pod** -> Ein Pod repräsentiert eine Gruppe von Anwendungs-Containern und Volumes, die in der gleichen Ausführungsumgebung laufen.
+2. **ReplicaSet** -> ReplicaSets bestimmen wieviele Exemplare eines Pods laufen und stellen sicher, dass die angeforderte Menge auch verfügbar ist.
+3. **Deployment** -> Deployments erweitern ReplicaSets um deklarative Updates von Container Images.
+4. **Service** -> Ein Service steuert den Zugriff auf einen Pod.
+5. **Ingress** -> Ähnlich einem Reverse Proxy ermöglicht ein Ingress den Zugriff auf einen Service über einen URL.
+
+Kubernetes Cluster
+--
+
+<img src="https://github.com/lauradubach/M300/blob/main/LB02/Monitoring%20Tool.PNG" width="500" height="350">
+
+Bei einem Cluster wird ein Kubernetes Master und mehrere Worker erzeugt. Diese Umgebung eignet sich zur Demonstration einer Verteilten Umgebung.
 
 Lernvortschritt
 --
