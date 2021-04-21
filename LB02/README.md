@@ -196,6 +196,31 @@ Kubernetes Cluster
 
 Bei einem Cluster wird ein Kubernetes Master und mehrere Worker erzeugt. Diese Umgebung eignet sich zur Demonstration einer Verteilten Umgebung.
 
+#### Konfiguration
+
+``master:
+  count: 1
+  cpus: 2
+  memory: 5120
+worker:
+  count: 2``
+
+Es wird ein Master und zwei Worker Nodes erstellt. Der Master und die Worker Nodes werden während der Installation automatisch miteinander gejoint.
+
+``use_dhcp: false  
+Fixe IP Adressen mit welchen die IP fuer Master und Worker beginnen sollen
+ip:
+  master:   192.168.137.100
+  worker:   192.168.137.111
+  Netzwerk "private_network" fuer Host-only Netzwerk, "public_network" fuer Bridged Netzwerke
+net:
+  network_type: private_network``
+
+Die restlichen Standardeinstellungen wie Host-only Netzwerk mit fixen IP-Adressen kann 1:1 verwendet werden.
+
+
+
+
 
 
 Lernvortschritt
