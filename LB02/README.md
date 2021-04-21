@@ -27,22 +27,23 @@ Docker ist eine Software, welche die Container-Virtualisierung von Anwendungen e
 * Container
 * Docker Registry
 
-#### Docker Daemon
+**Docker Daemon**
+
 Dieser erstellt, überwacht und führt Container aus. Er baut und speichert auch Images. Er wird mit dem Host-Betriebssystem gestartet.
 
-#### Docker Client
+**Docker Client**
 
 Er wird über die Kommandozeile (CLI) gestartet. Er kommuniziert über HTTP so ist es einfach Verbindungen zu Docker Daemons herzustellen.
 
-#### Images
+**Images**
 
 Dies sind Umgebungen die man als Container starten kann, man kann sie nicht verändern, sondern nur neue erstellen. Ein Image besteht aus einem Namen und der version.
 
-#### Container
+**Container**
 
 Dies sind die ausgeführten Images. Hier kann man veränderungen vornehmen, es werden jedoch nur die Änderungen zum originalen Image abgespeichert.
 
-#### Docker Registry
+**Docker Registry**
 
 Hier werden die Images abgelegt und verteilt. Docker-Hub ist die Standart-Registry indem sich viele Images befinden.
 
@@ -54,8 +55,8 @@ Um auf meinen Server Zugriff zu erhalten gehe ich wie folgt vor:
 
 #### Bestehende Container als Backend, Desktop-App als Frontend  einsetzen
 
-* Als erstes erstellen wir ein Dockerfile:_$docker build -t "Name"_
-* Nun erstellen wir den Container welcher auf Port 8080 hört:_$docker run -dit --name "Name" -p 8080:80 "Name"_
+* Als erstes erstellen wir ein Dockerfile: _$docker build -t "Name"_
+* Nun erstellen wir den Container welcher auf Port 8080 hört: _$docker run -dit --name "Name" -p 8080:80 "Name"_
 
 Wenn man nun die IP-Adresse mit dem Port eingibt sollte man folgendes Ergebniss erhalten:
 
@@ -78,11 +79,57 @@ Wenn man nun die IP-Adresse mit dem Port eingibt sollte man folgendes Ergebniss 
 Sicherheit
 --
 
+Das Überwachen und kontrollieren von laufenden Containern ist sehr wichtig. Man kann hierfür gute Monitoring-Lösungen verwenden
+
+#### Sicherheits Aspekte
+
+**Kernel Exploits**
+
+Der Kernel wird von allen Containern und dem Host verwendet, somit ist die Angriffsstelle mit deutlich mehr Auswirkung verbunden.
+
+**Denial-of-Service-(DoS-)Angriffe**
+
+Da sich alle Container die Kernel Ressourcen teilen, könnte ein Container den Zugriff auf bestimmte Ressourcen ganz für sich beanspruchen oder andere Container "verhungern" lassen.
+
+**Container-Breakouts**
+
+Wenn man im Container ein root ist, wird man auch root auf dem Host, dies ist sehr problematisch, da ein Angreifer der Zugriff auf einen Container erhält, auch Zugriff auf den Host bekommen kann.  
+
+**Vergiftete Images**
+
+Wenn man ein Image herunterlädt, kann man nicht wissen ob dies vielleicht manipuliert wurde. So kann man den Host und die eigenen Daten gefährden.
+
+**Verratene Geheimnisse**
+
+Wenn man auf einen Container oder eine Datenbank zugreiffen will benötigt man zb einen API-Schlüssel oder ein Benutzername und ein Passwort. Ein Angreifer könnte dies herausfinden und auf das System zugreiffen.
+
+**Least Privilege**
+
+Jeder Prozess und Container sollte nur mit so viel Zugriffsrechten und Ressourcen laufen, wie er gerade braucht, um seine Aufgaben zu erfüllen.
+
+* Sicherstellen, dass Prozesse in Containern nicht als root laufen
+* Dateisysteme schreibgeschützt einsetzen
+* Kernel Aufrufe einschränken
+* Ressourcen begrenzen
+
 #### 3 Aspekte der Container Absicherung
 
 1. Ein Passwort erstellen
-2. Host Ordner Zugriff einschränken
+2. Host Ordner Zugriff einschränken (Least Privilege)
 3. Einen Container als none root anlegen/erstellen
+
+Testfälle
+--
+
+#### Service Überwachung
+
+Mit folgendem Befehl kann man eine einfache Monitoring-Lösung einrichten:
+_$docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor:latest_
+
+#### Aktive Benachrichtigung einrichten
+
+Kubernetes
+--
 
 Lernvortschritt
 --
