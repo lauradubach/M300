@@ -55,9 +55,11 @@ Um auf meinen Server Zugriff zu erhalten gehe ich wie folgt vor:
 
 #### Docker-Container kombinieren
 
+1. ``$docker run --name osticket_mysql -d -e MYSQL_ROOT_PASSWORD=secret \
+ -e MYSQL_USER=osticket -e MYSQL_PASSWORD=secret -e MYSQL_DATABASE=osticket mariadb``
+2. ``$docker run --name osticket -d --link osticket_mysql:mysql -p 3030:80 osticket/osticket``
 
-
-#### Bestehende Container als Backend, Desktop-App als Frontend  einsetzen
+#### Bestehende Container als Backend, Desktop-App als Frontend einsetzen
 
 * Als erstes erstellen wir ein Dockerfile: _$docker build -t "Name"_
 * Nun erstellen wir den Container welcher auf Port 8080 hört: _$docker run -dit --name "Name" -p 8080:80 "Name"_
@@ -65,6 +67,8 @@ Um auf meinen Server Zugriff zu erhalten gehe ich wie folgt vor:
 Wenn man nun die IP-Adresse mit dem Port eingibt sollte man folgendes Ergebniss erhalten:
 
 <img src="https://github.com/lauradubach/M300/blob/main/LB02/Fotos/It%20works.PNG" width="400" height="200">
+
+#### Volumes zur persistenten Datenablage eingerichtet
 
 Glossar
 --
@@ -221,4 +225,4 @@ Die restlichen Standardeinstellungen wie Host-only Netzwerk mit fixen IP-Adresse
 Lernvortschritt
 --
 
-Auch in diesem Abschnitt, kannte ich voher nichts. Nun weiss ich was ein Container ist, was Docker ist, ich weiss wie man ein Container macht und ein Dockerfile erstellt, ich weiss auch wie man ein Image erstellt. In der Theorie habe ich sehr viel über die Sicherheitsaspekte gelernt und auch Kubernetes ein bisschen kennengelernt. Für mich war dieses Modul sehr interessant und eine grosse Wissensbereicherung. 
+Auch in diesem Abschnitt, kannte ich voher nichts. Am Anfang hatte ich Mühe mich einzulesen und alles zu verstehen, jedoch ging es nach ein paar Übungen scho ganz gut. Nun weiss ich was ein Container ist, was Docker ist, ich weiss wie man ein Container macht und ein Dockerfile erstellt, ich weiss auch wie man ein Image erstellt. In der Theorie habe ich sehr viel über die Sicherheitsaspekte gelernt und auch Kubernetes ein bisschen kennengelernt. Für mich war dieses Modul sehr interessant und eine grosse Wissensbereicherung.
