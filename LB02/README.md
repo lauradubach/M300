@@ -49,7 +49,7 @@ Hier werden die Images abgelegt und verteilt. Docker-Hub ist die Standart-Regist
 Testfälle
 --
 Um auf meinen Server Zugriff zu erhalten gehe ich wie folgt vor:
-1. Im cmd über ssh eine verbindung herstellen _$ssh ubuntu@IP_
+1. Im cmd über ssh eine Verbindung herstellen: _$ssh ubuntu@IP_
 2. Nun das korrekte Passwort eingeben
 
 #### Bestehende Container als Backend, Desktop-App als Frontend  einsetzen
@@ -59,7 +59,7 @@ Um auf meinen Server Zugriff zu erhalten gehe ich wie folgt vor:
 
 Wenn man nun die IP-Adresse mit dem Port eingibt sollte man folgendes Ergebniss erhalten:
 
-<img src="https://github.com/lauradubach/M300/blob/main/LB02/It%20works.PNG" width="500" height="350">
+<img src="https://github.com/lauradubach/M300/blob/main/LB02/It%20works.PNG" width="400" height="200">
 
 #### Glossar
 
