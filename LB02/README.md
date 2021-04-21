@@ -1,11 +1,11 @@
 LB02
 ==
 
-In den nachfolgenden Zeilen werde ich alles notieren was ich zu den Themen Container, Docker, Kubernetes und über die Sicherheit dazu gelernt habe.
+In den nachfolgenden Zeilen werde ich alles notieren, was ich zu den Themen Container, Docker, Kubernetes und über die Sicherheit dazu gelernt habe.
 
 Definition Container
 --
-Container sind eine Virtualisierungstechnik im Computerumfeld, die Anwendungen inklusive ihrer Laufzeitumgebungen voneinander trennt. Im Gegensatz zu einer virtuellen Maschine beinhalten Container kein eigenes Betriebssystem, sondern verwenden das des Systems, auf dem sie installiert sind. Container haben verschiedene Merkmale wie zum Beispiel, dass sie in einer Sekunde gestartet und gestoppt werden können, sie teilen sich Resourcen mit dem Host-Betriebssystem, sie sind portierbar und Cloud-Ready.
+Container sind eine Virtualisierungstechnik im Computerumfeld, die Anwendungen inklusive ihrer Laufzeitumgebungen voneinander trennt. Im Gegensatz zu einer virtuellen Maschine beinhalten Container kein eigenes Betriebssystem, sondern verwenden das des Systems, auf dem sie installiert sind. Container haben verschiedene Merkmale wie zum Beispiel, dass sie in einer Sekunde gestartet und gestoppt werden können, sie teilen sich Ressourcen mit dem Host-Betriebssystem, sie sind portierbar und Cloud-Ready.
 
 <img src="https://github.com/lauradubach/M300/blob/main/LB02/Fotos/Container.PNG" width="500" height="350">
 
@@ -15,7 +15,7 @@ Docker ist eine Software, welche die Container-Virtualisierung von Anwendungen e
 
 #### Vorteile
 
-* Die gute Skalierbarkeit durch die Nutzung von vielen weiteren container
+* Die gute Skalierbarkeit durch die Nutzung von vielen weiteren Container
 * Das schnelle starten und herunterfahren
 * Durch die einfache Verwaltung von Containern
 
@@ -37,7 +37,7 @@ Er wird über die Kommandozeile (CLI) gestartet. Er kommuniziert über HTTP so i
 
 **Images**
 
-Dies sind Umgebungen die man als Container starten kann, man kann sie nicht verändern, sondern nur neue erstellen. Ein Image besteht aus einem Namen und der version.
+Dies sind Umgebungen die man als Container starten kann, man kann sie nicht verändern, sondern nur neue erstellen. Ein Image besteht aus einem Namen und der Version.
 
 **Container**
 
@@ -45,7 +45,7 @@ Dies sind die ausgeführten Images. Hier kann man veränderungen vornehmen, es w
 
 **Docker Registry**
 
-Hier werden die Images abgelegt und verteilt. Docker-Hub ist die Standart-Registry indem sich viele Images befinden.
+Hier werden die Images abgelegt und verteilt. Docker-Hub ist die Standart-Registry in welcher sich viele Images befinden.
 
 Testfälle
 --
@@ -60,22 +60,22 @@ Um auf meinen Server Zugriff zu erhalten gehe ich wie folgt vor:
 
 2. ``$docker run --name osticket -d --link osticket_mysql:mysql -p 3030:80 osticket/osticket``
 
-Nun sollte unter folgender URL _IP:3030_ dieser Output auftauchen:
+Nun sollte unter folgender URL: _IP:3030_ dieser Output auftauchen:
 
 <img src="https://github.com/lauradubach/M300/blob/main/LB02/Fotos/Container%20Kominieren.PNG" width="500" height="300">
 
 #### Bestehende Container als Backend, Desktop-App als Frontend einsetzen
 
 * Als erstes erstellen wir ein Dockerfile: _$docker build -t "Name"_
-* Nun erstellen wir den Container welcher auf Port 8080 hört: _$docker run -dit --name "Name" -p 8080:80 "Name"_
+* Nun erstellen wir den Container, welcher auf Port 8080 hört: _$docker run -dit --name "Name" -p 8080:80 "Name"_
 
-Wenn man nun die IP-Adresse mit dem Port eingibt sollte man folgendes Ergebniss erhalten:
+Wenn man nun die IP-Adresse mit dem Port eingibt, sollte man folgendes Ergebniss erhalten:
 
 <img src="https://github.com/lauradubach/M300/blob/main/LB02/Fotos/It%20works.PNG" width="400" height="200">
 
 #### Volumes zur persistenten Datenablage eingerichtet
 
-Um ein Volume zu erstellen wie folgt vorgehen:
+Um ein Volume zu erstellen, wie folgt vorgehen:
 
 1. ``$ docker run -d \
   --name=nginxtest \
@@ -103,6 +103,8 @@ Glossar
 |$docker images | #gibt eine Liste lokaler Images aus |
 |$docker rm/rmi | #Entfernt Container / Entfernt Image |
 |$docker logs | #Gibt die logs eines Containers aus |
+|$ docker run -d \ --name=nginxtest \ --mount source=nginx-vol,destination=/usr/share/nginx/html,readonly \nginx:latest | #schreibgeschütztes Volume erstellen |
+|$docker volume inspect nginx-vol | #Volumes kontrollieren |
 
 Sicherheit
 --
