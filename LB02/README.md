@@ -127,6 +127,8 @@ Testfälle
 Mit folgendem Befehl kann man eine einfache Monitoring-Lösung einrichten:
 _$docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor:latest_
 
+<img src="https://github.com/lauradubach/M300/blob/main/LB02/Monitoring%20Tool.PNG" width="500" height="350">
+
 #### Aktive Benachrichtigung einrichten
 
 Kubernetes
