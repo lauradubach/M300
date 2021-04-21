@@ -7,7 +7,7 @@ Definition Container
 --
 Container sind eine Virtualisierungstechnik im Computerumfeld, die Anwendungen inklusive ihrer Laufzeitumgebungen voneinander trennt. Im Gegensatz zu einer virtuellen Maschine beinhalten Container kein eigenes Betriebssystem, sondern verwenden das des Systems, auf dem sie installiert sind. Container haben verschiedene Merkmale wie zum Beispiel, dass sie in einer Sekunde gestartet und gestoppt werden können, sie teilen sich Resourcen mit dem Host-Betriebssystem, sie sind portierbar und Cloud-Ready.
 
-<img src="https://github.com/lauradubach/M300/blob/main/LB02/Container.PNG" width="500" height="350">
+<img src="https://github.com/lauradubach/M300/blob/main/LB02/Fotos/Container.PNG" width="500" height="350">
 
 Definition Docker
 --
@@ -64,7 +64,7 @@ Um auf meinen Server Zugriff zu erhalten gehe ich wie folgt vor:
 
 Wenn man nun die IP-Adresse mit dem Port eingibt sollte man folgendes Ergebniss erhalten:
 
-<img src="https://github.com/lauradubach/M300/blob/main/LB02/It%20works.PNG" width="400" height="200">
+<img src="https://github.com/lauradubach/M300/blob/main/LB02/Fotos/It%20works.PNG" width="400" height="200">
 
 Glossar
 --
@@ -162,7 +162,7 @@ _$docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:
 
 Nun sollte man unter folgendem Link auf das Monitoring Tool kommen: _IP:2020/containers/_
 
-<img src="https://github.com/lauradubach/M300/blob/main/LB02/Monitoring%20Tool.PNG" width="500" height="350">
+<img src="https://github.com/lauradubach/M300/blob/main/LB02/Fotos/Monitoring%20Tool.PNG" width="500" height="350">
 
 #### Aktive Benachrichtigung einrichten
 
@@ -192,9 +192,11 @@ Kubernetes ist ein Open-Source-System zur Automatisierung der Bereitstellung, Sk
 Kubernetes Cluster
 --
 
-<img src="https://github.com/lauradubach/M300/blob/main/LB02/Kubernetes.PNG" width="500" height="350">
+<img src="https://github.com/lauradubach/M300/blob/main/LB02/Fotos/Kubernetes.PNG" width="500" height="350">
 
 Bei einem Cluster wird ein Kubernetes Master und mehrere Worker erzeugt. Diese Umgebung eignet sich zur Demonstration einer Verteilten Umgebung.
+
+
 
 Lernvortschritt
 --
