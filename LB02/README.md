@@ -189,8 +189,6 @@ Nun sollte man unter folgendem Link auf das Monitoring Tool kommen: _IP:2020/con
 
 <img src="https://github.com/lauradubach/M300/blob/main/LB02/Fotos/Monitoring%20Tool.PNG" width="500" height="350">
 
-#### Aktive Benachrichtigung einrichten
-
 Kubernetes
 --
 
