@@ -192,7 +192,7 @@ Kubernetes ist ein Open-Source-System zur Automatisierung der Bereitstellung, Sk
 Kubernetes Cluster
 --
 
-<img src="https://github.com/lauradubach/M300/blob/main/LB02/Monitoring%20Tool.PNG" width="500" height="350">
+<img src="https://github.com/lauradubach/M300/blob/main/LB02/Kubernetes.PNG" width="500" height="350">
 
 Bei einem Cluster wird ein Kubernetes Master und mehrere Worker erzeugt. Diese Umgebung eignet sich zur Demonstration einer Verteilten Umgebung.
 
