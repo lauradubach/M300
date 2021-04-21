@@ -62,7 +62,7 @@ Um auf meinen Server Zugriff zu erhalten gehe ich wie folgt vor:
 
 Nun sollte unter folgender URL _IP:3030_ dieser Output auftauchen:
 
-<img src="https://github.com/lauradubach/M300/blob/main/LB02/Fotos/Container%20Kominieren.PNG" width="400" height="200">
+<img src="https://github.com/lauradubach/M300/blob/main/LB02/Fotos/Container%20Kominieren.PNG" width="550" height=400">
 
 
 #### Bestehende Container als Backend, Desktop-App als Frontend einsetzen
