@@ -19,7 +19,7 @@ Docker ist eine Software, welche die Container-Virtualisierung von Anwendungen e
 * Das schnelle starten und herunterfahren
 * Durch die einfache Verwaltung von Containern
 
-#### Die wichtigsten Komponente sind:
+#### Die wichtigsten Komponenten sind:
 
 * Docker Daemon
 * Docker Client
@@ -48,11 +48,18 @@ Hier werden die Images abgelegt und verteilt. Docker-Hub ist die Standart-Regist
 
 Testfälle
 --
-Um auf meinen Server Zugriff zu erhalten gehen ich wie folgt vor:
-1. Im cmd über ssh eine verbindung herstellen $ssh ubuntu@IP
+Um auf meinen Server Zugriff zu erhalten gehe ich wie folgt vor:
+1. Im cmd über ssh eine verbindung herstellen _$ssh ubuntu@IP_
 2. Nun das korrekte Passwort eingeben
 
+#### Bestehende Container als Backend, Desktop-App als Frontend  einsetzen
 
+* Als erstes erstellen wir ein Dockerfile:_$docker build -t "Name"_
+* Nun erstellen wir den Container welcher auf Port 8080 hört:_$docker run -dit --name "Name" -p 8080:80 "Name"_
+
+Wenn man nun die IP-Adresse mit dem Port eingibt sollte man folgendes Ergebniss erhalten:
+
+<img src="https://github.com/lauradubach/M300/blob/main/LB02/It%20works.PNG" width="500" height="350">
 
 #### Glossar
 
@@ -73,7 +80,7 @@ Sicherheit
 
 #### 3 Aspekte der Container Absicherung
 
-1. Ein Passwort einstellen
+1. Ein Passwort erstellen
 2. Host Ordner Zugriff einschränken
 3. Einen Container als none root anlegen/erstellen
 
