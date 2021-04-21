@@ -62,7 +62,8 @@ Wenn man nun die IP-Adresse mit dem Port eingibt sollte man folgendes Ergebniss 
 
 <img src="https://github.com/lauradubach/M300/blob/main/LB02/It%20works.PNG" width="400" height="200">
 
-#### Glossar
+Glossar
+--
 
 | Befehle       | Bedeutung     |
 | ------------- |:-------------:|
