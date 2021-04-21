@@ -57,7 +57,13 @@ Um auf meinen Server Zugriff zu erhalten gehe ich wie folgt vor:
 
 1. ``$docker run --name osticket_mysql -d -e MYSQL_ROOT_PASSWORD=secret \
  -e MYSQL_USER=osticket -e MYSQL_PASSWORD=secret -e MYSQL_DATABASE=osticket mariadb``
+
 2. ``$docker run --name osticket -d --link osticket_mysql:mysql -p 3030:80 osticket/osticket``
+
+Nun sollte unter folgender URL _IP:3030_ dieser Output auftauchen:
+
+<img src="https://github.com/lauradubach/M300/blob/main/LB02/Fotos/Container%20Kominieren.PNG" width="400" height="200">
+
 
 #### Bestehende Container als Backend, Desktop-App als Frontend einsetzen
 
@@ -69,6 +75,7 @@ Wenn man nun die IP-Adresse mit dem Port eingibt sollte man folgendes Ergebniss 
 <img src="https://github.com/lauradubach/M300/blob/main/LB02/Fotos/It%20works.PNG" width="400" height="200">
 
 #### Volumes zur persistenten Datenablage eingerichtet
+
 
 Glossar
 --
