@@ -113,6 +113,35 @@ Jeder Prozess und Container sollte nur mit so viel Zugriffsrechten und Ressource
 * Kernel Aufrufe einschränken
 * Ressourcen begrenzen
 
+Beispiele
+--
+
+#### Berechtigungen eingrenzen
+`` $ RUN groupadd -r user_grp && useradd -r -g user_grp user
+    $ USER user``
+
+#### Speicher begrenzen
+
+``$ docker run -m 128m --memory-swap 128m amouat/stress stress --vm 1 --vm-bytes 127m -t 5s``
+
+#### Neustarts begrenzen
+
+``$ docker run -d --restart=on-failure:10 my-flaky-image``
+
+#### Zugriffe auf die Dateisysteme begrenzen
+
+`` $ docker run --read-only ubuntu touch x``
+
+#### Capabilities einschränken
+
+``$ docker run --cap-drop all --cap-add CHOWN ubuntu chown 100 /tmp``
+
+#### Ressourcen einschränken
+
+``$ docker run --ulimit cpu=12:14 amouat/stress stress --cpu 1_``
+
+
+
 #### 3 Aspekte der Container Absicherung
 
 1. Ein Passwort erstellen
@@ -125,7 +154,9 @@ Testfälle
 #### Service Überwachung
 
 Mit folgendem Befehl kann man eine einfache Monitoring-Lösung einrichten:
-_$docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor:latest_
+_$docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 2020:8080 google/cadvisor:latest_
+
+Nun sollte man unter folgendem Link auf das Monitoring Tool kommen: _IP:2020/containers/_
 
 <img src="https://github.com/lauradubach/M300/blob/main/LB02/Monitoring%20Tool.PNG" width="500" height="350">
 
