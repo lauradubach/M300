@@ -273,6 +273,8 @@ Mithilfe der Cloud-Integration lassen sich lokal gespeicherte Daten nahtlos mit 
 
 *Saas* = Software as a Service. SaaS ist neben Infrastructure as a Service (IaaS) und Platform as a Service (PaaS) eine der drei Hauptkategorien des Cloud Computing.
 
+*Iaas* = Infrastruktur as a Service. IT Infra­struktur wie Rechenleistung, Datenspeicher oder Netzkapazität bedarfsgerecht aus der Cloud zu be­zie­hen.
+
 
 Lernvortschritt
 --
