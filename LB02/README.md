@@ -241,6 +241,39 @@ net:
 
 Die restlichen Standardeinstellungen wie Host-only Netzwerk mit fixen IP-Adressen kann 1:1 verwendet werden.
 
+Zusatzaufgaben
+--
+#### Continuous Integration
+
+Ist der den Prozess des fortlaufenden Zusammenfügens von Komponenten zu einer Anwendung beschreibt.
+
+Das Ziel der kontinuierlichen Integration ist die Steigerung der Softwarequalität.
+
+Üblicherweise wird dafür nicht nur das Gesamtsystem neu gebaut, sondern es werden auch automatisierte Tests durchgeführt und Software-Metriken zur Messung der Softwarequalität erstellt.
+
+#### Image bereitstellen
+
+1. Zuerst muss man ein Container erstellen, mit dem Image, welches man auf Docker pushen will.
+2. Danach muss man diesen ins Dockerhub pushen.
+
+#### Cloud Integration
+
+Mithilfe der Cloud-Integration lassen sich lokal gespeicherte Daten nahtlos mit Informationen und Anwendungen in der Cloud nutzen. Dies bedeutet auch das die Automatisierung von heute immer besser wird.
+
+**Vorteile**
+
+* Netzwerkverkehrsmuster
+* Nutzerverhalten
+* Sicherheitsrelevante Ereignisse, sowohl extern als auch in Ihrer Umgebung
+* Compliance-Informationen
+* Fehler und Anomalien, die Ihre Performancedaten beeinflussen
+* Ressourcennutzung
+
+*iPaas* = Bei Integration-Platform-as-a-Service handelt es sich um eine unkomplizierte Lösung für das Hosting, die Entwicklung und die Integration von Cloud-Daten und -Anwendungen.
+
+*Saas* = Software as a Service. SaaS ist neben Infrastructure as a Service (IaaS) und Platform as a Service (PaaS) eine der drei Hauptkategorien des Cloud Computing.
+
+
 Lernvortschritt
 --
 
